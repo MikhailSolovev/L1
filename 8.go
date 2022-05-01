@@ -4,13 +4,13 @@ import "fmt"
 
 // Sets the bit at pos in the int64 n.
 func setBit(n int64, pos uint8) int64 {
-	n |= (1 << pos) // Сдвиг единички на  pos позиций влево
+	n |= (1 << pos) // Сдвиг единички на  pos позиций влево и применение побитового ИЛИ
 	return n
 }
 
 // Clear the bit at pos in the int64 n
 func clearBit(n int64, pos uint8) int64 {
-	n &= ^(1 << pos) // Сдвиг единички на pos позиций влево и применение побитового НЕ
+	n &= ^(1 << pos) // Сдвиг единички на pos позиций влево и применение побитового НЕ и побитового И
 	return n
 }
 
